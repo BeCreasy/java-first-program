@@ -15,14 +15,14 @@ public class SavingsCalculator {
         for (int i = 0; i <creditsAsString.length ; i++) {
             credits[i] = Float.parseFloat(creditsAsString[i]);
         }
-        for (int i = 0; i <debitsAsString.length ; i++) {
-            credits[i] = Float.parseFloat(debitsAsString[i]);
+        for (int j = 0; j <debitsAsString.length ; j++) {
+            debits[j] = Float.parseFloat(debitsAsString[j]);
         }
 
     SavingsCalculator calculator = new SavingsCalculator(credits,debits);
     float netSaving = calculator.calculate();
 
-    System.out.println("Net Saving = "+ netSaving + ", remaining days in month = " + remainingDaysInMonth(LocalDate.now()));
+    System.out.println("Net Savings = "+ netSaving + ", remaining days in month = " + remainingDaysInMonth(LocalDate.now()));
     }
 
     private float[] credits;
