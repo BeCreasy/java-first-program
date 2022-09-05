@@ -10,9 +10,12 @@ public class MortgageCalculator {
     private double monthlyPayment;
 
     public static void main(String[] args) {
-    long loanAmount = Long.parseLong(args[0]);
-    int termInYears = Integer.parseInt(args[1]);
-    float annualRate = Float.parseFloat(args[2]);
+    //long loanAmount = Long.parseLong(args[0]);
+    long loanAmount = Utilities.getLongValue(args[0]);
+    //int termInYears = Integer.parseInt(args[1]);
+    int termInYears = Utilities.getIntValue(args[1]);
+    //float annualRate = Float.parseFloat(args[2]);
+    float annualRate = Utilities.getFloatValue(args[2]);
 
     MortgageCalculator calculator = new MortgageCalculator(loanAmount,termInYears,annualRate);
     calculator.calculateMonthlyPayment();
